@@ -27,6 +27,7 @@ dependencies:
   http:
 
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -73,3 +74,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages
+firebase_auth: ^0.6.6
+  import 'package:firebase_auth/firebase_auth.dart';
