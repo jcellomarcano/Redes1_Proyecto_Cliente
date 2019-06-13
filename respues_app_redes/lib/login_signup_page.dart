@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter_login_demo/services/authentication.dart';
+import 'package:respues_app_redes/services/authentication.dart';
 
 class LoginSignUpPage extends StatefulWidget {
+  LoginSignUpPage({this.auth, this.onSignedIn});
 
-//  final BaseAuth auth;
-//  final VoidCallback onSignedIn;
+  final BaseAuth auth;
+  final VoidCallback onSignedIn;
 
   @override
   State<StatefulWidget> createState() => new _LoginSignUpPageState();
@@ -40,7 +41,7 @@ class _LoginSignUpPageState extends State<LoginSignUpPage> {
       _errorMessage = "";
       _isLoading = true;
     });
-/*    if (_validateAndSave()) {
+    if (_validateAndSave()) {
       String userId = "";
       try {
         if (_formMode == FormMode.LOGIN) {
@@ -55,9 +56,11 @@ class _LoginSignUpPageState extends State<LoginSignUpPage> {
         setState(() {
           _isLoading = false;
         });
+
         if (userId != null && userId.length > 0 && _formMode == FormMode.LOGIN) {
           widget.onSignedIn();
         }
+
       } catch (e) {
         print('Error: $e');
         setState(() {
@@ -68,7 +71,7 @@ class _LoginSignUpPageState extends State<LoginSignUpPage> {
             _errorMessage = e.message;
         });
       }
-    }*/
+    }
   }
 
 

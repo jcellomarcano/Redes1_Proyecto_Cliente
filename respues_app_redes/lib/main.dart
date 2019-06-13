@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
-import 'login_signup_page.dart';
+import 'package:respues_app_redes/services/authentication.dart';
+import 'package:respues_app_redes/root_page.dart';
 
-void main() => runApp(new MyApp());
+void main() {
+  runApp(new MyApp());
+}
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-        title: 'Flutter Login Demo',
+        title: 'Flutter login demo',
+        debugShowCheckedModeBanner: false,
         theme: new ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: new LoginSignUpPage()
-    );
+        home: new RootPage(auth: new Auth()));
   }
 }
