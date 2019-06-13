@@ -3,6 +3,8 @@ import 'package:respues_app_redes/services/authentication.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:respues_app_redes/todo.dart';
 import 'dart:async';
+import 'package:location/location.dart';
+import 'package:intl/intl.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.auth, this.userId, this.onSignedOut})
@@ -235,7 +237,24 @@ class _HomePageState extends State<HomePage> {
             );
           });
     } else {
-      return Center(child: Text("Welcome. Your list is empty",
+      var location = new Location();
+      Map<String, double> userLocation;
+      Future<Map<String, double>> _getLocation() async {
+        var currentLocation = <String, double>{};
+        currentLocation = await location.getLocation();
+        return currentLocation;
+      }
+
+      _getLocation().then((value) {
+        setState(() {
+          userLocation = value;
+        });
+      });
+
+      DateTime now = DateTime.now();
+      String formattedDate = new DateFormat("dd-MM-yyyy").format(now);
+      String formattedTime = new DateFormat("H:mm:ss").format(now);
+      return Center(child: Text("Date now " + formattedDate + " " + formattedTime + "\n User Location now " + userLocation.toString(),
         textAlign: TextAlign.center,
         style: TextStyle(fontSize: 30.0),));
     }
