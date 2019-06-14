@@ -1,0 +1,4 @@
+#Thu Jun 13 22:05:30 VET 2019
+base.0=/Users/jesusmarcano/work/projRedes/Redes1_Proyecto_Cliente/flutter_test_post/build/app/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
