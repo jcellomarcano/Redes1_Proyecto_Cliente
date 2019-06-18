@@ -20,13 +20,17 @@ class API{
   }
 
 
-  Future<AlertSender> postSendAlert(String url, {AlertSender body}) async{
-    return http.post(url, body: body).then((http.Response response){
+  Future<AlertSender> postSendAlert({AlertSender body, String url}) async{
+    return http.post(url, body: body.toJson()).then((http.Response response){
       final int statusCode = response.statusCode;
 
       if (statusCode != 200 || statusCode != 400 || json == null){
+        print(statusCode);
+        print(url + "\n" + body.toJson().toString() + "\n" + response.body.toString());
         throw new Exception("Error while fetching data");
       }
+      print(response.body);
+      print(body);
       return alertSenderFromJson(response.body);
     });
   }

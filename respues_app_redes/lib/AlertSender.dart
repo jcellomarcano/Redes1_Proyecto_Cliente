@@ -12,14 +12,19 @@ class AlertSender {
   String id;
   String time;
   String date;
-  String location;
+  Map<String, double> location;
+  String name;
+  bool status;
 
   AlertSender({
     this.id,
     this.time,
     this.date,
     this.location,
+    this.name,
+    this.status,
   });
+
 
   factory AlertSender.fromJson(Map<String, dynamic> json) => new AlertSender(
     id: json["id"],

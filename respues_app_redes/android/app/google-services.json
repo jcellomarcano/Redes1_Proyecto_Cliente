@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "151978549386",
+    "firebase_url": "https://redes-project-usb.firebaseio.com",
+    "project_id": "redes-project-usb",
+    "storage_bucket": "redes-project-usb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:151978549386:android:b8441c90b02fef40",
+        "android_client_info": {
+          "package_name": "site.jcellomarcano.respues_app_redes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "151978549386-c100qisspmpq3lmeg7t9ipqpi1dilpf3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "site.jcellomarcano.respues_app_redes",
+            "certificate_hash": "19572af1dc5755d44523765442aaee18282c833c"
+          }
+        },
+        {
+          "client_id": "151978549386-m0fk1rntcpp2hrjlgqdg0q9talcfc5jl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvdPN7WHyz6j1CCKuGZzs47650kuVNs1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "151978549386-m0fk1rntcpp2hrjlgqdg0q9talcfc5jl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
